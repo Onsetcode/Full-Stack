@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date and DOM</title>
+</head>
+<body>
+    <div class="mybutton">this is the last one unit</div>
+     <script>
+        let todayDate= new Date();
+        console.log(todayDate);
+        console.log(todayDate.getTime());
+        console.log(todayDate.getFullYear());
+        console.log(todayDate.getDay());
+        console.log(todayDate.getHours());
+        console.log(todayDate.getMinutes());
+        console.log(todayDate.getMilliseconds());
+        let button=document.createElement('button');
+        button.innerText='meraj';
+        document.querySelector('.mybutton').appendChild(button);
+        document.querySelector('.mybutton').removeChild(button);
+     </script>
+</body>
+</html>

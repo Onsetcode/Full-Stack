@@ -1,0 +1,24 @@
+.container{
+    background-color: rgb(138, 219, 233);
+    border: 1px solid black;
+    width: 38vh;
+}
+.btn{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button{
+    width: 40px;
+    height: 60px;
+    margin: 2px;
+    border-radius: 4px;
+    background-color: rgb(114, 113, 113);
+    color: white;
+    border: none;
+}
+#display{
+    margin: 2vh;
+    width: 34vh;
+    height: 7vh;
+}

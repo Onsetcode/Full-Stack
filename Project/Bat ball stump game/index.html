@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CRICKET GAME</title>
+  <link rel="stylesheet" href="style.css" />
+</head> 
+<body>
+  <div class="container">
+    <h1>Bat Ball Stump Game</h1>
+    <button class="button bat" onclick="
+       console.log('user choose the bat');
+       let  computerChoose= comChoice();
+       let result=getResult('bat',computerChoose);
+       finalResult('bat',computerChoose,result);">Bat</button>
+
+    <button class="button" onclick="
+       console.log('user choose the ball');
+        computerChoose=comChoice();
+        result=getResult('ball',computerChoose);
+        finalResult('ball',computerChoose,result);">Ball</button>
+    <button class="button" onclick="
+      console.log('user choose the stump');
+       computerChoose=comChoice();
+       result=getResult('stump',computerChoose);
+       finalResult('stump',computerChoose,result);">Stump</button>
+  </div>
+  <script>
+   let score={
+    win: 0,
+    lost: 0,
+    tie:0,
+   };
+    function comChoice() {
+      let randomVariable = Math.random()*3;
+      console.log('random variable value '+ randomVariable);
+      if (randomVariable > 0 && randomVariable <= 1) 
+        return 'bat';
+    
+      else if (randomVariable > 1 && randomVariable <= 2) 
+        return 'ball';
+      
+      else if (randomVariable > 2 && randomVariable <= 3) 
+        return 'stump';
+    }
+    
+    //get result
+  function getResult(userChoice,computerChoose){
+      console.log('computer choose value '+ computerChoose);
+    if(userChoice==='bat')
+    {
+      if(computerChoose==='bat')
+      {
+        score.tie++;
+      return 'match tie';
+      } 
+        else if(computerChoose==='ball')
+      {
+        score.win++;
+        return'user won' ;
+      } 
+        else if(computerChoose==='stump')
+      {
+        score.lost++;
+        return'computer has won';
+      }
+    } 
+    else if(userChoice==='ball') 
+    {
+      if(computerChoose==='ball')
+      {
+        score.tie++;
+        return 'match tie';
+      }
+      else if(computerChoose==='bat')
+      {
+        score.lost++;
+        return'computer has won';
+      }
+      else
+      {
+        score.win++;
+        return'user won' ;
+      }
+    } 
+     
+    else if(userChoice==='stump')
+    {
+        if(computerChoose==='stump')
+      {
+        score.tie++;
+        return 'match tie';
+      }
+      else if(computerChoose==='bat')
+      {
+        score.win++;
+        return'user won' ;
+      }
+      else if(computerChoose==='ball')
+      {
+        score.lost++;
+        return'computer has won';
+      }    
+    }
+         
+  }
+  function finalResult(userValue, computerValue, ans){
+    // alert(score)
+    alert('user choose '+userValue+  ' & computer choose '+computerValue+
+    '\nand finally  '+ans+
+    '\nwin: '+score.win+" lost: "+score.lost+' tie: '+score.tie); 
+
+  } 
+
+  </script>
+</body>
+</html>

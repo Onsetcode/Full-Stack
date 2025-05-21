@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+}
+.button{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(162, 207, 175);
+    cursor:pointer;
+    border: none;
+    border-radius: 50px;
+    
+}
+.height{
+    height: 10vh;
+    width: 7vw;
+    
+}

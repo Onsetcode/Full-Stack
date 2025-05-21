@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>practice of json....</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="Respect"></h1>
+    <button class="btn" onclick="
+    increase();">0</button>
+    <Script>
+        // 1 question
+        let myDate=new Date();
+        console.log(myDate.getHours());
+        function doWish(personName='dear'){
+        if(myDate.getHours()>6 && myDate.getHours()<12){
+            
+            document.querySelector('.Respect').innerText='Good morning '+personName;  
+        }
+        else if(myDate.getHours()>12 && myDate.getHours()<18){
+            document.querySelector('.Respect').innerText='Good Afternoon '+personName;  
+        }
+        else{
+            document.querySelector('.Respect').innerText='Good night '+personName; 
+        } 
+        }
+        // second questions
+        doWish();
+
+        // questions third
+        let i=0;
+        function increase(){
+             i=i+1;
+            document.querySelector('.btn').innerText=i;
+            if(i%2==0){
+                document.querySelector('.btn') 
+            }
+        }
+
+    </Script>
+</body>
+</html>

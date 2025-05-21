@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning HTML</title>
+    <style>
+        .container{
+            display: flex;
+      justify-content: center; 
+      align-items: center;            /* Centers items vertically */
+      height: 10vh;                  
+        }
+           #count {
+      display: flex;
+      justify-content: center; 
+      align-items: center;            /* Centers items vertically */
+      height: 10vh;                  /* Full viewport height */
+    }
+    </style>
+</head>
+<body>
+    <!-- <h1>first coding of javascript</h1> -->
+   <!-- name:<input type="text" placeholder="name"> -->
+    <div class="container">
+   <button id="count" onclick="incrementCount()">0</a></button>&nbsp &nbsp;
+</div>
+   <script>
+    // alert('hii meraj, please start the coding')  
+    // console.log('hii meraj, please start the coding');
+    // clickable button
+    let count = 0;
+
+        function incrementCount() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+   </script>
+</body>
+</html>

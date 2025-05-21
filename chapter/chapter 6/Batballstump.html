@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRICKET GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bat Ball Stump Game</h1>
+        <button class="button bat" onclick="
+        console.log('user choose the bat');
+        let randomVariable=Math.random()*3;
+        let computerChooseValue;
+        if(randomVariable>0 && randomVariable<=1)
+            {
+                computerChooseValue='bat'; 
+            }
+        
+        else if(randomVariable>1 && randomVariable<=2)
+            {
+                computerChooseValue='ball';
+            }
+        
+        else if(randomVariable>2 && randomVariable<=3)
+            {
+                computerChooseValue='stump';
+            }
+            //print the user choose value
+        console.log('computer choose the '+ computerChooseValue);
+        if(computerChooseValue==='bat')
+            alert('match tie');
+        else if(computerChooseValue==='ball')
+            alert('user won');
+        else 
+            alert('computer has won');
+        ">Bat</button>
+
+  <button class="button" onclick="
+  console.log('user choose the ball');
+  randomVariable=Math.random()*3;
+  if(randomVariable>0 && randomVariable<=1)
+      {
+          computerChooseValue='bat'; 
+      }
+  
+  else if(randomVariable>1 && randomVariable<=2)
+      {
+          computerChooseValue='ball';
+      }
+  
+  else if(randomVariable>2 && randomVariable<=3)
+      {
+          computerChooseValue='stump';
+      }
+      //print the user choose value
+  console.log('computer choose the '+ computerChooseValue);
+  if(computerChooseValue==='bat')
+      alert('computer won th match');
+  else if(computerChooseValue==='ball')
+      alert('Match tie');
+  else 
+      alert('user won the match');
+  ">Ball</button>
+  <!-- //stump -->
+          <button class="button" onclick="
+          console.log('user choose the stump');
+          randomVariable=Math.random()*3;
+          if(randomVariable>0 && randomVariable<=1)
+              {
+                  computerChooseValue='bat'; 
+              }
+          
+          else if(randomVariable>1 && randomVariable<=2)
+              {
+                  computerChooseValue='ball';
+              }
+          
+          else if(randomVariable>2 && randomVariable<=3)
+              {
+                  computerChooseValue='stump';
+              }
+              //print the user choose value
+          console.log('computer choose the '+ computerChooseValue);
+          if(computerChooseValue==='bat')
+              alert('user won th match');
+          else if(computerChooseValue==='stump')
+              alert('Match tie');
+          else 
+              alert('computer won the match');
+          ">Stump</button>
+    </div>
+</body>
+
+</html>
